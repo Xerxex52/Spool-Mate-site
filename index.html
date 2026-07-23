@@ -157,6 +157,12 @@
     .feature-card h3 { margin-bottom: 10px; font-size: 1.3rem; line-height: 1.2; letter-spacing: -.02em; }
     .feature-card p { margin-bottom: 0; color: var(--muted); }
 
+    .cap-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+    .cap-item { display: flex; gap: 15px; align-items: flex-start; padding: 22px 24px; border: 1px solid var(--line); border-radius: 20px; background: var(--panel); }
+    .cap-mark { flex: 0 0 42px; width: 42px; height: 42px; display: grid; place-items: center; color: var(--green); border-radius: 13px; background: var(--green-soft); font-size: 1.2rem; font-weight: 800; }
+    .cap-item h3 { margin-bottom: 5px; font-size: 1.1rem; line-height: 1.2; letter-spacing: -.01em; }
+    .cap-item p { margin-bottom: 0; color: var(--muted); font-size: .97rem; line-height: 1.46; }
+
     .spotlight { display: grid; grid-template-columns: minmax(0,1fr) minmax(240px,390px); align-items: center; gap: clamp(42px,8vw,100px); }
     .spotlight-copy { max-width: 650px; }
     .spotlight-copy > p:not(.kicker) { color: var(--muted-strong); font-size: 1.08rem; }
@@ -199,6 +205,7 @@
       .hero-grid { grid-template-columns: minmax(0,1fr) minmax(240px,.58fr); gap: 42px; }
       h1 { font-size: clamp(3rem,7vw,4rem); }
       .feature-grid, .steps { gap: 14px; }
+      .cap-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
       .feature-card, .step { padding: 24px; }
       .feature-mark { margin-bottom: 30px; }
       .privacy { grid-template-columns: 1fr; gap: 24px; }
@@ -226,7 +233,7 @@
       .intro { margin-bottom: 36px; }
       h2 { margin-bottom: 15px; font-size: clamp(2rem,9vw,2.65rem); line-height: 1.07; }
       .intro > p:last-child, .spotlight-copy > p:not(.kicker), .closing p:not(.kicker) { font-size: 1rem; }
-      .feature-grid, .steps, .spotlight, .device-grid { grid-template-columns: 1fr; }
+      .feature-grid, .steps, .spotlight, .device-grid, .cap-grid { grid-template-columns: 1fr; }
       .feature-card { min-height: 0; padding: 26px; }
       .feature-mark { margin-bottom: 24px; }
       .spotlight { gap: 42px; }
@@ -368,6 +375,60 @@
       </div>
     </section>
 
+    <section class="section" id="more">
+      <div class="shell">
+        <div class="intro">
+          <p class="kicker" data-i18n="moreKicker">More than the basics</p>
+          <h2 data-i18n="moreTitle">Everything you need, nothing in the way.</h2>
+          <p data-i18n="moreBody">Beyond search and scanning, Spool Mate helps you stay on top of your stock day to day.</p>
+        </div>
+        <div class="cap-grid">
+          <article class="cap-item">
+            <div class="cap-mark" aria-hidden="true">♫</div>
+            <div>
+              <h3 data-i18n="cap1Title">Voice updates</h3>
+              <p data-i18n="cap1Body">Update quantities hands-free by voice in the table view.</p>
+            </div>
+          </article>
+          <article class="cap-item">
+            <div class="cap-mark" aria-hidden="true">◎</div>
+            <div>
+              <h3 data-i18n="cap2Title">Low-stock alerts</h3>
+              <p data-i18n="cap2Body">Get notified before a filament runs out mid-print.</p>
+            </div>
+          </article>
+          <article class="cap-item">
+            <div class="cap-mark" aria-hidden="true">▦</div>
+            <div>
+              <h3 data-i18n="cap3Title">Home Screen widget</h3>
+              <p data-i18n="cap3Body">See your stock at a glance without opening the app.</p>
+            </div>
+          </article>
+          <article class="cap-item">
+            <div class="cap-mark" aria-hidden="true">☰</div>
+            <div>
+              <h3 data-i18n="cap4Title">List and table views</h3>
+              <p data-i18n="cap4Body">A focused list on the go, a detailed table when you need it.</p>
+            </div>
+          </article>
+          <article class="cap-item">
+            <div class="cap-mark" aria-hidden="true">↺</div>
+            <div>
+              <h3 data-i18n="cap5Title">Add history</h3>
+              <p data-i18n="cap5Body">Jump back to spools you added recently.</p>
+            </div>
+          </article>
+          <article class="cap-item">
+            <div class="cap-mark" aria-hidden="true">≈</div>
+            <div>
+              <h3 data-i18n="cap6Title">Humidity guidance</h3>
+              <p data-i18n="cap6Body">A simple dryness estimate for each opened spool.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-alt">
       <div class="shell">
         <div class="intro">
@@ -445,6 +506,13 @@
         screensKicker: "Built for every screen", screensTitle: "Comfortable on iPhone. Spacious on iPad.", screensBody: "Use a focused list on the go or a detailed table when you have more room.",
         phoneTitle: "Inventory in your pocket", phoneBody: "Quick search and filters keep the right spool within reach.",
         ipadTitle: "A complete view on iPad", ipadBody: "Dashboard and inventory sit side by side without stretching or distortion.",
+        moreKicker: "More than the basics", moreTitle: "Everything you need, nothing in the way.", moreBody: "Beyond search and scanning, Spool Mate helps you stay on top of your stock day to day.",
+        cap1Title: "Voice updates", cap1Body: "Update quantities hands-free by voice in the table view.",
+        cap2Title: "Low-stock alerts", cap2Body: "Get notified before a filament runs out mid-print.",
+        cap3Title: "Home Screen widget", cap3Body: "See your stock at a glance without opening the app.",
+        cap4Title: "List and table views", cap4Body: "A focused list on the go, a detailed table when you need it.",
+        cap5Title: "Add history", cap5Body: "Jump back to spools you added recently.",
+        cap6Title: "Humidity guidance", cap6Body: "A simple dryness estimate for each opened spool.",
         workflowKicker: "Simple by design", workflowTitle: "A three-step routine.",
         step1Title: "Add or scan", step1Body: "Enter a spool manually or scan its label with Spool Mate Pro.",
         step2Title: "Find and filter", step2Body: "Locate the right brand, material or color in seconds.",
@@ -469,6 +537,13 @@
         screensKicker: "Conçu pour chaque écran", screensTitle: "Pratique sur iPhone. Spacieux sur iPad.", screensBody: "Utilisez une liste claire en mobilité ou un tableau détaillé lorsque vous avez plus d’espace.",
         phoneTitle: "L’inventaire dans votre poche", phoneBody: "La recherche et les filtres rendent chaque bobine immédiatement accessible.",
         ipadTitle: "Une vue complète sur iPad", ipadBody: "Le tableau de bord et l’inventaire restent côte à côte, sans étirement ni déformation.",
+        moreKicker: "Plus que l’essentiel", moreTitle: "Tout ce qu’il faut, rien qui gêne.", moreBody: "Au-delà de la recherche et du scan, Spool Mate vous aide à garder votre stock à jour au quotidien.",
+        cap1Title: "Mise à jour vocale", cap1Body: "Modifiez les quantités à la voix dans la vue tableau, sans les mains.",
+        cap2Title: "Alertes de stock bas", cap2Body: "Soyez prévenu avant de tomber en rupture en pleine impression.",
+        cap3Title: "Widget écran d’accueil", cap3Body: "Voyez votre stock d’un coup d’œil sans ouvrir l’application.",
+        cap4Title: "Vues liste et tableau", cap4Body: "Une liste claire en mobilité, un tableau détaillé au besoin.",
+        cap5Title: "Historique d’ajout", cap5Body: "Revenez aux bobines ajoutées récemment.",
+        cap6Title: "Indice d’humidité", cap6Body: "Une estimation simple du séchage de chaque bobine ouverte.",
         workflowKicker: "Simple par nature", workflowTitle: "Une routine en trois étapes.",
         step1Title: "Ajoutez ou scannez", step1Body: "Saisissez une bobine ou scannez son étiquette avec Spool Mate Pro.",
         step2Title: "Cherchez et filtrez", step2Body: "Trouvez la bonne marque, matière ou couleur en quelques secondes.",
@@ -493,6 +568,13 @@
         screensKicker: "Für jeden Bildschirm", screensTitle: "Übersichtlich auf dem iPhone. Großzügig auf dem iPad.", screensBody: "Unterwegs eine klare Liste nutzen oder auf dem großen Bildschirm eine detaillierte Tabelle öffnen.",
         phoneTitle: "Inventar für unterwegs", phoneBody: "Suche und Filter halten die richtige Spule griffbereit.",
         ipadTitle: "Komplette Übersicht auf dem iPad", ipadBody: "Dashboard und Inventar stehen unverzerrt nebeneinander.",
+        moreKicker: "Mehr als die Grundlagen", moreTitle: "Alles, was du brauchst – nichts im Weg.", moreBody: "Über Suche und Scan hinaus hilft dir Spool Mate, deinen Bestand im Alltag im Blick zu behalten.",
+        cap1Title: "Sprachaktualisierung", cap1Body: "Ändere Mengen freihändig per Sprache in der Tabellenansicht.",
+        cap2Title: "Niedrigbestandswarnungen", cap2Body: "Werde benachrichtigt, bevor ein Filament mitten im Druck ausgeht.",
+        cap3Title: "Home-Screen-Widget", cap3Body: "Sieh deinen Bestand auf einen Blick, ohne die App zu öffnen.",
+        cap4Title: "Listen- und Tabellenansicht", cap4Body: "Unterwegs eine klare Liste, bei Bedarf eine detaillierte Tabelle.",
+        cap5Title: "Verlauf", cap5Body: "Springe zu kürzlich hinzugefügten Spulen zurück.",
+        cap6Title: "Feuchtigkeitshinweis", cap6Body: "Eine einfache Trockenheitsschätzung für jede geöffnete Spule.",
         workflowKicker: "Bewusst einfach", workflowTitle: "Ein Ablauf in drei Schritten.",
         step1Title: "Hinzufügen oder scannen", step1Body: "Spule manuell eingeben oder das Etikett mit Spool Mate Pro scannen.",
         step2Title: "Suchen und filtern", step2Body: "Marke, Material oder Farbe in Sekunden finden.",
@@ -517,6 +599,13 @@
         screensKicker: "Diseñado para cada pantalla", screensTitle: "Cómodo en iPhone. Amplio en iPad.", screensBody: "Use una lista clara en movimiento o una tabla detallada cuando tenga más espacio.",
         phoneTitle: "El inventario en su bolsillo", phoneBody: "La búsqueda y los filtros mantienen cada bobina al alcance.",
         ipadTitle: "Vista completa en iPad", ipadBody: "El panel y el inventario aparecen juntos sin estiramientos ni deformaciones.",
+        moreKicker: "Más que lo básico", moreTitle: "Todo lo que necesitas, sin estorbos.", moreBody: "Más allá de la búsqueda y el escaneo, Spool Mate te ayuda a mantener tu stock al día.",
+        cap1Title: "Actualización por voz", cap1Body: "Cambia cantidades por voz en la vista de tabla, sin usar las manos.",
+        cap2Title: "Alertas de stock bajo", cap2Body: "Recibe un aviso antes de quedarte sin filamento a mitad de impresión.",
+        cap3Title: "Widget en pantalla de inicio", cap3Body: "Consulta tu stock de un vistazo sin abrir la aplicación.",
+        cap4Title: "Vistas de lista y tabla", cap4Body: "Una lista clara en movimiento y una tabla detallada cuando la necesites.",
+        cap5Title: "Historial de añadidos", cap5Body: "Vuelve a las bobinas añadidas recientemente.",
+        cap6Title: "Indicador de humedad", cap6Body: "Una estimación simple del secado de cada bobina abierta.",
         workflowKicker: "Diseño sencillo", workflowTitle: "Una rutina de tres pasos.",
         step1Title: "Añada o escanee", step1Body: "Introduzca una bobina o escanee su etiqueta con Spool Mate Pro.",
         step2Title: "Busque y filtre", step2Body: "Encuentre marca, material o color en segundos.",
